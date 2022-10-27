@@ -1,0 +1,7 @@
+select {
+    width: 100%;
+    margin-bottom: 1rem;
+    margin-top: 0.25rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+}

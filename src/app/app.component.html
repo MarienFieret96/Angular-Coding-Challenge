@@ -1,0 +1,29 @@
+<div class="main">
+  <div class="main-content">
+  <!-- TITEL-->
+  <h2>Voertuiginformatie opzoeken</h2>
+
+  <!-- FORM-->
+  <ng-container [formGroup]="kentekenForm">
+
+    <!-- SELECT INFO-->
+    <app-form-select formGroupName="selectInfo"></app-form-select>
+
+    <!-- INPUT INFO-->
+    <app-form-input formGroupName="inputInfo"></app-form-input>
+
+  </ng-container>
+
+  <!-- FORM VERZENDEN-->
+  <div>
+      <button type="submit">
+        Verzenden
+      </button>
+      <div class="alert" >Vul alle waardes correct in.</div>
+  </div>
+  </div>
+
+  <!-- PREVIEW IMAGE-->
+  <app-voorbeeld-foto class="image" ></app-voorbeeld-foto>
+  
+</div>

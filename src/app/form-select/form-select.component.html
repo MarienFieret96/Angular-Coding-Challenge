@@ -1,0 +1,19 @@
+<ng-container [formGroup]="form"> 
+    <!-- SELECT VOERTUIG TYPE-->
+    <label class="mt">
+      <span>Van welk type voertuig wilt u voertuiginformatie opzoeken?</span>
+      <select (change)="changeVehicleSubtype()" formControlName="type" name="vehicle-type">
+        <option *ngFor="let tType of vehicleTypes ">
+            {{tType}}
+        </option>
+      </select>
+    </label>
+
+    <!-- SELECT VOERTUIG SUBTYPE-->
+    <label>
+      <span >Welk type [auto/motor/brommer] hebt u?</span>
+      <select formControlName="subtype" name="vehicle-subtype">
+        <option *ngFor="let tName of currentVehicleSubtypes">{{tName}}</option>
+      </select>
+    </label>
+</ng-container>   

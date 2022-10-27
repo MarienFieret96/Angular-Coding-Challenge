@@ -1,0 +1,23 @@
+ <ng-container [formGroup]="form">
+    
+    <!-- INPUT KENTEKEN -->
+    <label>
+      <span>Vul het kenteken van uw [auto/motor/brommer] in.</span>
+      <input class="kenteken" formControlName="kenteken" type="text" name="kenteken" placeholder="Bijvoorbeeld AA-BB-12">
+      <div class="invalid" *ngIf="!form.get('kenteken')?.valid && form.get('kenteken')?.touched">
+        <div>Oeps, het ingevoerde kenteken is niet geldig.</div>
+        <div>Gebruik het volgende formaat AA-12-BB.</div>
+      </div>
+    </label>
+
+    <!-- INPUT MELDCODE -->
+     <label>
+      <span>Vul de meldcode voor in.</span>
+      <input formControlName="meldcode" type="text" name="meldcode" placeholder="Bijvoorbeeld 1234">
+      <div class="invalid" *ngIf="!form.get('meldcode')?.valid && form.get('meldcode')?.touched">
+        <div>Oeps, de ingevoerde meldcode is niet geldig.</div>
+        <div>Gebruik het volgende formaat 1234.</div>
+      </div>
+    </label>
+    
+</ng-container>  
